@@ -1,0 +1,9 @@
+5a. File System Checker
+The checker will first find the start of each segments, and initialize a new bitmap that is used for checking bits that is unused but marked used. The first thing it will check is root directory.
+Then, use a Deep First Search algorithm to iterate through all the files in the directory. We could check the inconsistency between directory and inodes, including inode type, format and recording the reference count. Also, the address checking and data block usage recording will be handled during DFS by looking through all the addresses in the addrs[]. 
+After DFS, the checker will go through the inode map to check errors related to references. The last thing it will check is comparing two bitmaps to see if the block is marked in use but not be used at all.
+Note that for indirect blocks, it will first use a block to record all the addresses, then use all the recorded blocks. Don't forget to mark the address block in use!
+
+5b. The Small File Optimization
+First, add small file type for inode and a flag for open instruction of small file. Then make changes to readi() and writei() to add a new support for small file, which means read and write data to the addrs[]. Make sure to always track the size of the file to guarantee it does not grow out of bound. 
+In the writei(), we added a predicate to make sure that if a small file is written, update its inode any way since the data is stored in the inode. Also, in iput(), we added a new predicate in order to avoid freeing blocks for small files.

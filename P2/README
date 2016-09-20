@@ -1,0 +1,38 @@
+DESCRIPTION ABOUT P1
+Author: Yuting Liu
+Feb, 16, 2016
+
+-------------------------------------------------
+2a. whoosh shell
+After compiling the file, run makefile.
+Then run the test file
+
+-------------------------------------------------
+2b. Scheduling/xv6
+
+(1) setpri(int num)
+in sysproc.c : add function "sys_setpri(void)";
+in proc.c : add function "set_pri(int num, struct proc *p)"
+
+This function will help the system to set the current process with the priority number.
+if (num != 1 && num != 2) --> return -1;
+otherwise, set the number and return 0;
+
+(2) getpinfo(struct pstat *)
+in sysproc.c: add functino "sys_getpinfo(void)"
+in proc.c : add function "getpinfo(struct pstat * cur_pro)"
+
+This functin will help to get the process table state information after traverse the whole table.
+
+(3) update the function "scheduler(void)" in proc.c
+* make sure all runnable processes with high priority goes before the processes with low priority.
+* And all processes with same priority will be scheduled in round robin
+* Every time if there is a process with high priority, all processes with low priority will be blocked
+
+I'm doing as folowing: count the number of runnable processes with high priority in the process list.
+If it is non-zero, run only processes with high priority. Otherwise, run low process.
+
+Every time before running process with low priority, traverse the process list again to recount the number
+so as to make sure that only when there is no process with high priority, processes with low priority will be run.
+
+

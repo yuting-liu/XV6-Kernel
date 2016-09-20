@@ -1,0 +1,121 @@
+execve("/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/busywait", ["/afs/cs.wisc.edu/p/course/cs537-"...], [/* 50 vars */]) = 0
+brk(0)                                  = 0x1cab000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fed45c70000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("./tls/x86_64/libcrawler.so", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("./tls/libcrawler.so", O_RDONLY)   = -1 ENOENT (No such file or directory)
+open("./x86_64/libcrawler.so", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("./libcrawler.so", O_RDONLY)       = 6
+read(6, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`\25\0\0\0\0\0\0"..., 832) = 832
+fstat(6, {st_mode=S_IFREG|0775, st_size=23900, ...}) = 0
+getcwd("/tmp/tmp1k6vug/p", 128)         = 17
+mmap(NULL, 2109256, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x7fed45a6d000
+mprotect(0x7fed45a70000, 2093056, PROT_NONE) = 0
+mmap(0x7fed45c6f000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x2000) = 0x7fed45c6f000
+close(6)                                = 0
+open("./tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("./tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("./x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("./libpthread.so.0", O_RDONLY)     = -1 ENOENT (No such file or directory)
+open("/s/gcc-4.7.3/lib64/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/s/gcc-4.7.3/lib64/tls/x86_64", 0x7fff9fe110e0) = -1 ENOENT (No such file or directory)
+open("/s/gcc-4.7.3/lib64/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/s/gcc-4.7.3/lib64/tls", 0x7fff9fe110e0) = -1 ENOENT (No such file or directory)
+open("/s/gcc-4.7.3/lib64/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/s/gcc-4.7.3/lib64/x86_64", 0x7fff9fe110e0) = -1 ENOENT (No such file or directory)
+open("/s/gcc-4.7.3/lib64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/s/gcc-4.7.3/lib64", {st_mode=S_IFDIR|0750, st_size=4096, ...}) = 0
+open("tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("tls/libpthread.so.0", O_RDONLY)   = -1 ENOENT (No such file or directory)
+open("x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("libpthread.so.0", O_RDONLY)       = -1 ENOENT (No such file or directory)
+open("/s/python-2.7.3/lib/tls/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/s/python-2.7.3/lib/tls/x86_64", 0x7fff9fe110e0) = -1 ENOENT (No such file or directory)
+open("/s/python-2.7.3/lib/tls/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/s/python-2.7.3/lib/tls", 0x7fff9fe110e0) = -1 ENOENT (No such file or directory)
+open("/s/python-2.7.3/lib/x86_64/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/s/python-2.7.3/lib/x86_64", 0x7fff9fe110e0) = -1 ENOENT (No such file or directory)
+open("/s/python-2.7.3/lib/libpthread.so.0", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/s/python-2.7.3/lib", {st_mode=S_IFDIR|0750, st_size=2048, ...}) = 0
+open("/etc/ld.so.cache", O_RDONLY)      = 6
+fstat(6, {st_mode=S_IFREG|0644, st_size=158585, ...}) = 0
+mmap(NULL, 158585, PROT_READ, MAP_PRIVATE, 6, 0) = 0x7fed45a46000
+close(6)                                = 0
+open("/lib64/libpthread.so.0", O_RDONLY) = 6
+read(6, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000^\0\3562\0\0\0"..., 832) = 832
+fstat(6, {st_mode=S_IFREG|0755, st_size=145936, ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fed45a45000
+mmap(0x32ee000000, 2212848, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x32ee000000
+mprotect(0x32ee017000, 2097152, PROT_NONE) = 0
+mmap(0x32ee217000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x17000) = 0x32ee217000
+mmap(0x32ee219000, 13296, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x32ee219000
+close(6)                                = 0
+open("./tls/x86_64/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("./tls/libc.so.6", O_RDONLY)       = -1 ENOENT (No such file or directory)
+open("./x86_64/libc.so.6", O_RDONLY)    = -1 ENOENT (No such file or directory)
+open("./libc.so.6", O_RDONLY)           = -1 ENOENT (No such file or directory)
+open("/s/gcc-4.7.3/lib64/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("tls/x86_64/libc.so.6", O_RDONLY)  = -1 ENOENT (No such file or directory)
+open("tls/libc.so.6", O_RDONLY)         = -1 ENOENT (No such file or directory)
+open("x86_64/libc.so.6", O_RDONLY)      = -1 ENOENT (No such file or directory)
+open("libc.so.6", O_RDONLY)             = -1 ENOENT (No such file or directory)
+open("/s/python-2.7.3/lib/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/lib64/libc.so.6", O_RDONLY)      = 6
+read(6, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0p\356\301\3552\0\0\0"..., 832) = 832
+fstat(6, {st_mode=S_IFREG|0755, st_size=1926520, ...}) = 0
+mmap(0x32edc00000, 3750152, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 6, 0) = 0x32edc00000
+mprotect(0x32edd8a000, 2097152, PROT_NONE) = 0
+mmap(0x32edf8a000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 6, 0x18a000) = 0x32edf8a000
+mmap(0x32edf8f000, 18696, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x32edf8f000
+close(6)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fed45a44000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fed45a43000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fed45a42000
+arch_prctl(ARCH_SET_FS, 0x7fed45a43700) = 0
+mprotect(0x32edf8a000, 16384, PROT_READ) = 0
+mprotect(0x32ee217000, 4096, PROT_READ) = 0
+mprotect(0x32eda1f000, 4096, PROT_READ) = 0
+munmap(0x7fed45a46000, 158585)          = 0
+set_tid_address(0x7fed45a439d0)         = 21016
+set_robust_list(0x7fed45a439e0, 24)     = 0
+futex(0x7fff9fe11a0c, FUTEX_WAKE_PRIVATE, 1) = 0
+futex(0x7fff9fe11a0c, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, NULL, 7fed45a43700) = -1 EAGAIN (Resource temporarily unavailable)
+rt_sigaction(SIGRTMIN, {0x32ee005cb0, [], SA_RESTORER|SA_SIGINFO, 0x32ee00f7e0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {0x32ee005d40, [], SA_RESTORER|SA_RESTART|SA_SIGINFO, 0x32ee00f7e0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+getrlimit(RLIMIT_STACK, {rlim_cur=10240*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(0)                                  = 0x1cab000
+brk(0x1ccc000)                          = 0x1ccc000
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed45041000
+mprotect(0x7fed45041000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed45a40ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed45a419d0, tls=0x7fed45a41700, child_tidptr=0x7fed45a419d0) = 21017
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed44640000
+mprotect(0x7fed44640000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed4503fff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed450409d0, tls=0x7fed45040700, child_tidptr=0x7fed450409d0) = 21018
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed43c3f000
+mprotect(0x7fed43c3f000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed4463eff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed4463f9d0, tls=0x7fed4463f700, child_tidptr=0x7fed4463f9d0) = 21019
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed4323e000
+mprotect(0x7fed4323e000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed43c3dff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed43c3e9d0, tls=0x7fed43c3e700, child_tidptr=0x7fed43c3e9d0) = 21020
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed4283d000
+mprotect(0x7fed4283d000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed4323cff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed4323d9d0, tls=0x7fed4323d700, child_tidptr=0x7fed4323d9d0) = 21021
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed41e3c000
+mprotect(0x7fed41e3c000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed4283bff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed4283c9d0, tls=0x7fed4283c700, child_tidptr=0x7fed4283c9d0) = 21022
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed4143b000
+mprotect(0x7fed4143b000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed41e3aff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed41e3b9d0, tls=0x7fed41e3b700, child_tidptr=0x7fed41e3b9d0) = 21023
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed40a3a000
+mprotect(0x7fed40a3a000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed41439ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed4143a9d0, tls=0x7fed4143a700, child_tidptr=0x7fed4143a9d0) = 21024
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed40039000
+mprotect(0x7fed40039000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed40a38ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed40a399d0, tls=0x7fed40a39700, child_tidptr=0x7fed40a399d0) = 21025
+mmap(NULL, 10489856, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7fed235ff000
+mprotect(0x7fed235ff000, 4096, PROT_NONE) = 0
+clone(child_stack=0x7fed23ffeff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7fed23fff9d0, tls=0x7fed23fff700, child_tidptr=0x7fed23fff9d0) = 21026
+futex(0x7fed45a419d0, FUTEX_WAIT, 21017, NULL) = 0
+exit_group(0)                           = ?
++++ exited with 0 +++

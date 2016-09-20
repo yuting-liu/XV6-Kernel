@@ -1,0 +1,26 @@
+DESCRIPTION ABOUT P1
+Author: Yuting Liu
+Jan, 28, 2016
+
+-------------------------------------------------
+2a. whoosh
+After compiling the file, run command:
+  shell% ./fastsort [ -n] file
+Here, n is the nth word of every line ordered by in the sorting.
+
+[-n] is optional. If no [-n] specified, the sorting will in alphabetical order of 1st word.
+Otherwise, the sorting will in alphabetical order of nth word. if n is larger than the length of sentence, 
+it will use the last word for the sorting.
+
+-------------------------------------------------
+2b. Scheduling/xv6
+
+I have already added the system call: getprocs(), which will loop the proc table to check the status of all processes.
+Return the number of processes that is not in the status of unused.
+
+For the testing of getprocs() function. I have written a "int testgetprocs(void)" function in user/ folder.
+Then running "make qemu" when qemu prompt, run the command:
+  $ testgetprocs();
+The result of running function of getprocs() will be provided.
+
+

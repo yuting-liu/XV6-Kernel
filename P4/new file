@@ -1,0 +1,26 @@
+1. Add fields in struct proc (proc.h)
+
+  struct spinlock sz_lock;      // protecting lock when grow address space
+  int* reference_count;          // reference count for clone threads
+
+2. Initialize sz_lock & reference_count
+
+(1) allocproc() (proc.c)
+  initlock(&(proc->sz_lock), "proc address space"); 
+  reference_count = 1;
+(2) fork (proc.c) --> call allocproc()
+
+3. growproc --> threadsafe (proc.c)
+
+4. change reference_count
+(1) clone()
+  np->reference_count = proc->reference_count;
+  *(proc->reference_count)++;
+(2) join()
+*(p->reference_count)--;
+(3) wait()
+only if p->state == ZOMBIE && p->reference_count == 1
+free
+
+5. unnecessary to use malloc()
+

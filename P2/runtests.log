@@ -1,0 +1,317 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target `clean'.  Stop.
+gcc whoosh.c -o whoosh
+
+
+test build PASSED
+ (build project using make)
+ file 'whoosh' exists after make clean, removing
+
+starting exit
+
+**********************************************************************
+
+Test exit
+run exit
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+starting pwd
+
+**********************************************************************
+
+Test pwd
+run pwd
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test pwd PASSED (5 of 5)
+ (run pwd)
+
+starting cd
+
+**********************************************************************
+
+Test cd
+cd with argument
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test cd PASSED (5 of 5)
+ (cd with argument)
+
+starting badcd
+
+**********************************************************************
+
+Test badcd
+cd to a bad directory
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test badcd PASSED (5 of 5)
+ (cd to a bad directory)
+
+starting exec
+
+**********************************************************************
+
+Test exec
+path should be /bin
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+starting badexec
+
+**********************************************************************
+
+Test badexec
+run programs that do not exist in /bin
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test badexec PASSED (10 of 10)
+ (run programs that do not exist in /bin)
+
+starting path
+
+**********************************************************************
+
+Test path
+run path and a program that exists in a given path
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test path PASSED (5 of 5)
+ (run path and a program that exists in a given path)
+
+starting path2
+
+**********************************************************************
+
+Test path2
+run path with a long pathname and many different paths
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test path2 PASSED (5 of 5)
+ (run path with a long pathname and many different paths)
+
+starting stress
+
+**********************************************************************
+
+Test stress
+stress testing the shell with large number of commands
+
+**********************************************************************
+/u/c/s/cs537-1/ta/tests/2a/stress/gen -s 1 -n 10000
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test stress PASSED (5 of 5)
+ (stress testing the shell with large number of commands)
+
+starting line
+
+**********************************************************************
+
+Test line
+line with maximum allowed length
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test line PASSED (5 of 5)
+ (line with maximum allowed length)
+
+starting badline
+
+**********************************************************************
+
+Test badline
+a line that is too long
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test badline PASSED (5 of 5)
+ (a line that is too long)
+
+starting badarg
+
+**********************************************************************
+
+Test badarg
+extra argument to whoosh
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh /extra
+
+
+test badarg PASSED (5 of 5)
+ (extra argument to whoosh)
+
+starting whitespace
+
+**********************************************************************
+
+Test whitespace
+leading and trailing whitespace, full whitespaces or empty string
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test whitespace PASSED (5 of 5)
+ (leading and trailing whitespace, full whitespaces or empty string)
+
+starting rdr
+
+**********************************************************************
+
+Test rdr
+simple redirection with no standard error
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test rdr PASSED (10 of 10)
+ (simple redirection with no standard error)
+
+starting rdr2
+
+**********************************************************************
+
+Test rdr2
+simple redirection with standard error
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test rdr2 PASSED (10 of 10)
+ (simple redirection with standard error)
+
+starting badrdr
+
+**********************************************************************
+
+Test badrdr
+bad redirection format
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test badrdr PASSED (5 of 5)
+ (bad redirection format)
+
+starting badrdr2
+
+**********************************************************************
+
+Test badrdr2
+bad redirection that redirects to invalid path
+
+**********************************************************************
+/tmp/tmpYgB37C/p/./whoosh
+
+
+test badrdr2 PASSED (5 of 5)
+ (bad redirection that redirects to invalid path)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+ file 'whoosh' exists after make clean, removing
+
+test exit PASSED (5 of 5)
+ (run exit)
+
+test pwd PASSED (5 of 5)
+ (run pwd)
+
+test cd PASSED (5 of 5)
+ (cd with argument)
+
+test badcd PASSED (5 of 5)
+ (cd to a bad directory)
+
+test exec PASSED (5 of 5)
+ (path should be /bin)
+
+test badexec PASSED (10 of 10)
+ (run programs that do not exist in /bin)
+
+test path PASSED (5 of 5)
+ (run path and a program that exists in a given path)
+
+test path2 PASSED (5 of 5)
+ (run path with a long pathname and many different paths)
+
+test stress PASSED (5 of 5)
+ (stress testing the shell with large number of commands)
+
+test line PASSED (5 of 5)
+ (line with maximum allowed length)
+
+test badline PASSED (5 of 5)
+ (a line that is too long)
+
+test badarg PASSED (5 of 5)
+ (extra argument to whoosh)
+
+test whitespace PASSED (5 of 5)
+ (leading and trailing whitespace, full whitespaces or empty string)
+
+test rdr PASSED (10 of 10)
+ (simple redirection with no standard error)
+
+test rdr2 PASSED (10 of 10)
+ (simple redirection with standard error)
+
+test badrdr PASSED (5 of 5)
+ (bad redirection format)
+
+test badrdr2 PASSED (5 of 5)
+ (bad redirection that redirects to invalid path)
+
+Passed 18 of 18 tests.
+Overall 18 of 18
+Points 100 of 100

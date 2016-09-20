@@ -1,0 +1,127 @@
+#include "types.h"
+#include "x86.h"
+#include "defs.h"
+#include "param.h"
+#include "mmu.h"
+#include "proc.h"
+#include "sysfunc.h"
+#include "pstat.h"
+
+int
+sys_fork(void)
+{
+  return fork();
+}
+
+int
+sys_exit(void)
+{
+  exit();
+  return 0;  // not reached
+}
+
+int
+sys_wait(void)
+{
+  return wait();
+}
+
+int
+sys_kill(void)
+{
+  int pid;
+
+  if(argint(0, &pid) < 0)
+    return -1;
+  return kill(pid);
+}
+
+int
+sys_getpid(void)
+{
+  return proc->pid;
+}
+
+// return # processes exist in the system of call
+int
+sys_getprocs(void) {
+  return getnumproc();
+}
+
+// sets the priority for calling process
+int sys_setpri(void) {
+  int num;
+  // setpri(int num)
+  if(argint(0, &num) < 0) {
+	  // failure
+	  return -1;
+  }
+  if(num != 1 && num != 2) {
+	  return -1;
+  }
+  setpri(num, proc);
+  // success
+  return 0;
+}
+
+// return basic nformation about each running process
+int sys_getpinfo(void) {
+  struct pstat *cur_pstat;
+  
+  if(argptr(0, (void*)&cur_pstat, sizeof(struct pstat *)) < 0) {
+    return -1;
+  }
+  if(cur_pstat == NULL) {
+    return -1;
+  }
+  getpinfo(cur_pstat);
+  return 0;
+}
+
+int
+sys_sbrk(void)
+{
+  int addr;
+  int n;
+
+  if(argint(0, &n) < 0)
+    return -1;
+  addr = proc->sz;
+  if(growproc(n) < 0)
+    return -1;
+  return addr;
+}
+
+int
+sys_sleep(void)
+{
+  int n;
+  uint ticks0;
+  
+  if(argint(0, &n) < 0)
+    return -1;
+  acquire(&tickslock);
+  ticks0 = ticks;
+  while(ticks - ticks0 < n){
+    if(proc->killed){
+      release(&tickslock);
+      return -1;
+    }
+    sleep(&ticks, &tickslock);
+  }
+  release(&tickslock);
+  return 0;
+}
+
+// return how many clock tick interrupts have occurred
+// since boot.
+int
+sys_uptime(void)
+{
+  uint xticks;
+  
+  acquire(&tickslock);
+  xticks = ticks;
+  release(&tickslock);
+  return xticks;
+}

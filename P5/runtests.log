@@ -1,0 +1,350 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+rm fscheck
+Trying to build project using make
+make
+gcc fscheck.c -o fscheck
+
+
+test build PASSED
+ (build project using make)
+
+starting good
+
+**********************************************************************
+
+Test good
+run on a good filesystem
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/good
+
+
+test good PASSED (5 of 5)
+ (run on a good filesystem)
+
+starting goodrefcnt
+
+**********************************************************************
+
+Test goodrefcnt
+run on fs with only good reference counts
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/goodrefcnt
+
+
+test goodrefcnt PASSED (5 of 5)
+ (run on fs with only good reference counts)
+
+starting nonexistant
+
+**********************************************************************
+
+Test nonexistant
+run on a nonexistant filesystem
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/nonexistant
+
+
+test nonexistant PASSED (5 of 5)
+ (run on a nonexistant filesystem)
+
+starting badroot
+
+**********************************************************************
+
+Test badroot
+run on a filesystem with a root directory in bad location
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/badroot
+
+
+test badroot PASSED (5 of 5)
+ (run on a filesystem with a root directory in bad location)
+
+starting badinode
+
+**********************************************************************
+
+Test badinode
+run on a filesystem with a bad type in an inode
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/badinode
+
+
+test badinode PASSED (5 of 5)
+ (run on a filesystem with a bad type in an inode)
+
+starting badaddr
+
+**********************************************************************
+
+Test badaddr
+run on a filesystem with a bad direct address in an inode
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/badaddr
+
+
+test badaddr PASSED (5 of 5)
+ (run on a filesystem with a bad direct address in an inode)
+
+starting badindir1
+
+**********************************************************************
+
+Test badindir1
+run on a filesystem with a bad indirect address in an inode
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/badindir1
+
+
+test badindir1 PASSED (5 of 5)
+ (run on a filesystem with a bad indirect address in an inode)
+
+starting badroot2
+
+**********************************************************************
+
+Test badroot2
+run on a filesystem with a bad root directory in good location
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/badroot2
+
+
+test badroot2 PASSED (5 of 5)
+ (run on a filesystem with a bad root directory in good location)
+
+starting badfmt
+
+**********************************************************************
+
+Test badfmt
+run on a filesystem without . or .. directories
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/badfmt
+
+
+test badfmt PASSED (5 of 5)
+ (run on a filesystem without . or .. directories)
+
+starting mismatch
+
+**********************************************************************
+
+Test mismatch
+run on a filesystem with .. pointing to the wrong directory
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/mismatch
+
+
+test mismatch PASSED (5 of 5)
+ (run on a filesystem with .. pointing to the wrong directory)
+
+starting mrkfree
+
+**********************************************************************
+
+Test mrkfree
+run on a filesystem with an inuse direct block marked free
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/mrkfree
+
+
+test mrkfree PASSED (5 of 5)
+ (run on a filesystem with an inuse direct block marked free)
+
+starting indirfree
+
+**********************************************************************
+
+Test indirfree
+run on a filesystem with an inuse indirect block marked free
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/indirfree
+
+
+test indirfree PASSED (5 of 5)
+ (run on a filesystem with an inuse indirect block marked free)
+
+starting mrkused
+
+**********************************************************************
+
+Test mrkused
+run on a filesystem with a free block marked used
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/mrkused
+
+
+test mrkused PASSED (5 of 5)
+ (run on a filesystem with a free block marked used)
+
+starting addronce
+
+**********************************************************************
+
+Test addronce
+run on a filesystem with an address used more than once
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/addronce
+
+
+test addronce PASSED (5 of 5)
+ (run on a filesystem with an address used more than once)
+
+starting imrkused
+
+**********************************************************************
+
+Test imrkused
+run with inode marked used, but not referenced in a directory
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/imrkused
+
+
+test imrkused PASSED (5 of 5)
+ (run with inode marked used, but not referenced in a directory)
+
+starting imrkfree
+
+**********************************************************************
+
+Test imrkfree
+run with inode marked free, but referenced in a directory
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/imrkfree
+
+
+test imrkfree PASSED (5 of 5)
+ (run with inode marked free, but referenced in a directory)
+
+starting badrefcnt
+
+**********************************************************************
+
+Test badrefcnt
+run on fs which has an inode with a bad reference count
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/badrefcnt
+
+
+test badrefcnt PASSED (5 of 5)
+ (run on fs which has an inode with a bad reference count)
+
+starting badindir2
+
+**********************************************************************
+
+Test badindir2
+run on a filesystem with a bad indirect address in an inode
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/badindir2
+
+
+test badindir2 PASSED (5 of 5)
+ (run on a filesystem with a bad indirect address in an inode)
+
+starting dironce
+
+**********************************************************************
+
+Test dironce
+run on fs with a directory appearing more than once
+
+**********************************************************************
+/tmp/tmp7dA9kO/p/./fscheck /u/c/s/cs537-1/ta/tests/5a/images/dironce
+
+
+test dironce PASSED (5 of 5)
+ (run on fs with a directory appearing more than once)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test good PASSED (5 of 5)
+ (run on a good filesystem)
+
+test goodrefcnt PASSED (5 of 5)
+ (run on fs with only good reference counts)
+
+test nonexistant PASSED (5 of 5)
+ (run on a nonexistant filesystem)
+
+test badroot PASSED (5 of 5)
+ (run on a filesystem with a root directory in bad location)
+
+test badinode PASSED (5 of 5)
+ (run on a filesystem with a bad type in an inode)
+
+test badaddr PASSED (5 of 5)
+ (run on a filesystem with a bad direct address in an inode)
+
+test badindir1 PASSED (5 of 5)
+ (run on a filesystem with a bad indirect address in an inode)
+
+test badroot2 PASSED (5 of 5)
+ (run on a filesystem with a bad root directory in good location)
+
+test badfmt PASSED (5 of 5)
+ (run on a filesystem without . or .. directories)
+
+test mismatch PASSED (5 of 5)
+ (run on a filesystem with .. pointing to the wrong directory)
+
+test mrkfree PASSED (5 of 5)
+ (run on a filesystem with an inuse direct block marked free)
+
+test indirfree PASSED (5 of 5)
+ (run on a filesystem with an inuse indirect block marked free)
+
+test mrkused PASSED (5 of 5)
+ (run on a filesystem with a free block marked used)
+
+test addronce PASSED (5 of 5)
+ (run on a filesystem with an address used more than once)
+
+test imrkused PASSED (5 of 5)
+ (run with inode marked used, but not referenced in a directory)
+
+test imrkfree PASSED (5 of 5)
+ (run with inode marked free, but referenced in a directory)
+
+test badrefcnt PASSED (5 of 5)
+ (run on fs which has an inode with a bad reference count)
+
+test badindir2 PASSED (5 of 5)
+ (run on a filesystem with a bad indirect address in an inode)
+
+test dironce PASSED (5 of 5)
+ (run on fs with a directory appearing more than once)
+
+Passed 20 of 20 tests.
+Overall 20 of 20
+Points 95 of 95

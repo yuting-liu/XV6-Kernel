@@ -1,0 +1,206 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to build project using make
+make
+make: Nothing to be done for `all'.
+
+
+test build PASSED
+ (build project using make)
+
+starting single_thread
+
+**********************************************************************
+
+Test single_thread
+Calling crawl with single downloader and parser thread and check if only 1 thread spawned
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/single_thread
+
+downloader_threads : 1
+
+parser_threads : 1
+
+
+test single_thread PASSED (10 of 10)
+ (Calling crawl with single downloader and parser thread and check if only 1 thread spawned)
+
+starting concurrent_threads
+
+**********************************************************************
+
+Test concurrent_threads
+Checking if multiple downloader and parser threads execute concurrently
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/concurrent_threads
+
+downloader_threads : 5
+
+parser_threads : 4
+
+
+test concurrent_threads PASSED (10 of 10)
+ (Checking if multiple downloader and parser threads execute concurrently)
+
+starting basic_test
+
+**********************************************************************
+
+Test basic_test
+Check if the program gives the correct output for a simple graph
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/basic_test
+
+
+test basic_test PASSED (10 of 10)
+ (Check if the program gives the correct output for a simple graph)
+
+starting simple_loop
+
+**********************************************************************
+
+Test simple_loop
+Check if the program gives the correct output for a simple loop
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/simple_loop
+
+
+test simple_loop PASSED (10 of 10)
+ (Check if the program gives the correct output for a simple loop)
+
+starting complex_loop
+
+**********************************************************************
+
+Test complex_loop
+Check if the program gives the correct output for a complex graph containing a loop
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/complex_loop
+
+
+test complex_loop PASSED (10 of 10)
+ (Check if the program gives the correct output for a complex graph containing a loop)
+
+starting complex_parsing
+
+**********************************************************************
+
+Test complex_parsing
+Check if the program parses the file correctly and gives the right output
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/complex_parsing
+
+
+test complex_parsing PASSED (10 of 10)
+ (Check if the program parses the file correctly and gives the right output)
+
+starting small_buffer
+
+**********************************************************************
+
+Test small_buffer
+Check if the program works correctly when buffer is small and there is only a single thread but parser parses a lot of links
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/small_buffer
+
+
+test small_buffer PASSED (10 of 10)
+ (Check if the program works correctly when buffer is small and there is only a single thread but parser parses a lot of links)
+
+starting small_buffer_2
+
+**********************************************************************
+
+Test small_buffer_2
+Similar to previous test but now there are multiple downloader threads, so should be able to parse all links and put it in buffer as the buffer gets consumed by multiple threads
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/small_buffer_2
+
+
+test small_buffer_2 PASSED (10 of 10)
+ (Similar to previous test but now there are multiple downloader threads, so should be able to parse all links and put it in buffer as the buffer gets consumed by multiple threads)
+
+starting too_many_threads
+
+**********************************************************************
+
+Test too_many_threads
+Calling crawl with single downloader and parser thread and check if only 1 thread spawned
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/too_many_threads
+
+downloader_threads : 7
+
+parser_threads : 1
+
+
+test too_many_threads PASSED (10 of 10)
+ (Calling crawl with single downloader and parser thread and check if only 1 thread spawned)
+
+starting busywait
+
+**********************************************************************
+
+Test busywait
+Check if spin locks are used instead of condition variables for the dowloader and parser queues
+
+**********************************************************************
+/afs/cs.wisc.edu/p/course/cs537-remzi/ta/tests/4a/tests/busywait
+
+
+test busywait PASSED (20 of 20)
+ (Check if spin locks are used instead of condition variables for the dowloader and parser queues)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test single_thread PASSED (10 of 10)
+ (Calling crawl with single downloader and parser thread and check if only 1 thread spawned)
+
+test concurrent_threads PASSED (10 of 10)
+ (Checking if multiple downloader and parser threads execute concurrently)
+
+test basic_test PASSED (10 of 10)
+ (Check if the program gives the correct output for a simple graph)
+
+test simple_loop PASSED (10 of 10)
+ (Check if the program gives the correct output for a simple loop)
+
+test complex_loop PASSED (10 of 10)
+ (Check if the program gives the correct output for a complex graph containing a loop)
+
+test complex_parsing PASSED (10 of 10)
+ (Check if the program parses the file correctly and gives the right output)
+
+test small_buffer PASSED (10 of 10)
+ (Check if the program works correctly when buffer is small and there is only a single thread but parser parses a lot of links)
+
+test small_buffer_2 PASSED (10 of 10)
+ (Similar to previous test but now there are multiple downloader threads, so should be able to parse all links and put it in buffer as the buffer gets consumed by multiple threads)
+
+test too_many_threads PASSED (10 of 10)
+ (Calling crawl with single downloader and parser thread and check if only 1 thread spawned)
+
+test busywait PASSED (20 of 20)
+ (Check if spin locks are used instead of condition variables for the dowloader and parser queues)
+
+Passed 11 of 11 tests.
+Overall 11 of 11
+Points 110 of 110
